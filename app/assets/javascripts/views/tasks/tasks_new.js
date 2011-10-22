@@ -47,6 +47,4 @@ ExampleApp.Views.TasksNew = Backbone.View.extend({
 		this.remove();
 	}
 	
-	
-	
 })
