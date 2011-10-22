@@ -19,6 +19,12 @@ class TasksController < ApplicationController
     respond_with(Task.create(params[:task]))
   end
   
+  def update
+    task = Task.find(params[:id])
+    task.update_attributes(params[:task])
+    respond_with(task)
+  end
+  
   ## If you are implementing validations
   
   # def create
