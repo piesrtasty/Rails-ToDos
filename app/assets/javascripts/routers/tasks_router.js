@@ -1,12 +1,3 @@
-// ExampleApp.Routers.Tasks = Backbone.Router.extend({
-// 	routes: {
-// 		"" : "index"
-// 	},
-// 	
-// 	index: function()	{
-// 		new ExampleApp.Views.TasksIndex();
-// 	}
-// });
 
 ExampleApp.Routers.Tasks = Backbone.Router.extend({
 	routes: {
@@ -15,17 +6,13 @@ ExampleApp.Routers.Tasks = Backbone.Router.extend({
 	},
 	
 	index: function()	{
-		var tasksIndexView = new ExampleApp.Views.TasksIndex({
-			collection: ExampleApp.tasks
-		});
-		$('#tasks').html(tasksIndexView.render().el);
+		var view = new ExampleApp.Views.TasksIndex({ collection: this.collection });
+		$('#tasks').html(view.render().el);
 	},
 	
 	newTask: function()	{
-		$("a.create").hide();
-		
-		var tasksNewView = new ExampleApp.Views.TasksNew();
-		$('#tasks').empty().html(tasksNewView.render().el);
-		$('#task_title').focus();
+		var view = new ExampleApp.Views.TasksNew({ collection: this.collection });
+		$('#tasks').html(view.render().el)
 	}
+
 });
