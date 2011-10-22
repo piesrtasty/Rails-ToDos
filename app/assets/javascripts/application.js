@@ -3,11 +3,23 @@
 // be included in the compiled file accessible from http://example.com/assets/application.js
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
-//
+
+
 //= require jquery
 //= require jquery_ujs
-//= require_tree .
-
-// other application requires
+//
+//= require underscore
+//= require backbone
+//= require backbone.authtokenadapter
+//
+//= require backbone-forms
+//= require jquery-ui-editors
+//
+//= require example_app
+//
+//= require_tree ./models/
+//= require_tree ./collections
+//= require_tree ./views
+//= require_tree ./routers
 //= require_tree ../templates
 //= require_tree .
