@@ -1,107 +1,52 @@
-// ExampleApp.Views.TaskForm = Backbone.View.extend({
-//   tagName: "form",
-// 
-//   initialize: function() {
-//     _.bindAll(this, "render");
-//   },
-// 
-//   render: function() {
-//     console.log("Form render, this.el: ");
-//     console.log($(this.el));
-//     return this;
-//   },
-// 
-//   commit: function() {
-//     this.fieldset.commit();
-//   }
-// });
 ExampleApp.Views.TasksNew = Backbone.View.extend({
-	id: "new_task",
+	tagName: 'form',
+	id: "new-task",
 	
 	events: {
-		"submit form" 			: "save",
-		"click .buttons a" 	: "leave"
+		"submit": "save",
+		"click a.leave": "leave"
 	},
 	
 	initialize: function()	{
-		_.bindAll(this, "render");
+		_.bindAll(this, "render", "saved");
+		this.newTask();
+	},
+	
+	newTask: function()	{
 		this.model = new ExampleApp.Models.Task();
 		this.form = new Backbone.Form({ model: this.model });
-		this.form.render();
 	},
 	
 	render: function()	{
-		console.log("ABOUT TO EMPTY");
-		console.log($(this.el));
-		$(this.el).empty();
-		
-		// $(this.el).append("<form></form>");
-		// 	$('form', this.el).append(this.form.el);
-		// 	$('form', this.el).append('<li class="bbf-field"><input type="submit" value="Create task"></li>');
-		// 	$('form', this.el).append('<li class="bb-field"><a href="#">I\'m done adding tasks</a></li>');
-		$(this.el).html(JST['tasks/new']());
-				this.$('#task_title').focus();
+		$(this.el).html(this.form.render().el);
+		this.$('ul').append(JST['tasks/form_buttons']());
 		return this;
 	},
 	
-	save: function(event)	{
-		event.preventDefault();
-		event.stopPropagation();
-		
-		var self = this;
-		
-		this.$("input[type='submit']").attr('disabled', 'disabled').val('Please wait...');
-		
-		// this.
-		
-		this.model.save({ title: this.$('#task_title').val()},	{
-			success: function(model, response)	{
-				console.log("success");
-				ExampleApp.tasks.add(model);
-				self.model = new ExampleApp.Models.Task();
-				self.render();
-			},
-			error: function()	{
-				console.log("fail")
-				self.$('input.create').removeAttr('disabled').val('Create task');
-			}
-		});
-		
+	renderFlash: function()	{
+		$(this.el).prepend(JST['tasks/flash']({ flashText: flashText, type: 'success' }));
+	},
+	
+	save: function()	{
+		this.form.commit();
+		this.model.save({}, { success: this.saved });
 		return false;
 	},
 	
-	leave: function()	{
-		$("a.create").show();
+	saved: function()	{
+		var flash = "Created task: " + this.model.escape('title');
 		
-		this.form.leave();
+		this.collection.add(this.model);
+		this.newTask();
+		this.render();
+		this.renderFlash(flash);
+	},
+	
+	leave: function()	{
 		this.unbind();
 		this.remove();
 	}
 	
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
+	
+})
