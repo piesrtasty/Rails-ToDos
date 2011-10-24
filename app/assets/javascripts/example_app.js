@@ -13,3 +13,7 @@ var ExampleApp = {
     }
   }
 };
+
+var Support = {
+	
+};

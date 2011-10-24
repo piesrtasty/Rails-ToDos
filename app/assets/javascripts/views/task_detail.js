@@ -1,5 +1,5 @@
 ExampleApp.Views.TaskDetail = Backbone.View.extend({
-	template: JST['tasks/tasks_detail'], // TODO create template file
+	// template: JST['tasks/tasks_detail'], // TODO create template file
 	tagName: 'section',
 	id: 'task',
 	
@@ -16,11 +16,13 @@ ExampleApp.Views.TaskDetail = Backbone.View.extend({
 	},
 	
 	render: function()	{
-		$(this.el).html(this.template({ task: this.model }));
+		$(this.el).html(JST['tasks/tasks_detail']({ task: this.model }));
 	},
 	
 	createComment: function()	{
-		
+		var comment = new Comment({ text: this.$('.new-comment-input').val() });
+		this.$('.new-comment-input').val('');
+		this.model.comments.create(comment);
 	}
 	
 	

@@ -1,4 +1,5 @@
-ExampleApp.Routers.Tasks = Backbone.Router.extend({
+// ExampleApp.Routers.Tasks = Backbone.Router.extend({
+ExampleApp.Routers.Tasks = Support.SwappingRouter.extend({
   initialize: function() {
     this.collection = ExampleApp.tasks; // TODO eventually pass in
   },
