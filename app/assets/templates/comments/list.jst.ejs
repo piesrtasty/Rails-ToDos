@@ -2,7 +2,7 @@
 <ul>
 	<% task.comments.each(function(comment)	{
 		<%= JST['comments/item']({ comment: comment }) %>
-	<% }) %>
+	<% }); %>
 </ul>
 
 <%= JST['comments/new']() %>
