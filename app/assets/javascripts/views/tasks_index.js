@@ -26,7 +26,7 @@ ExampleApp.Views.TasksIndex = Backbone.View.extend({
 // Aggregate index view
 
 // ExampleApp.Views.TasksIndex = Backbone.View.extend({
-// 	template: JST['tasks/tasks_index'],
+// 	// template: JST['tasks/tasks_index'],
 // 	tagName: 'section',
 // 	id: 'tasks',
 // 	
@@ -38,7 +38,7 @@ ExampleApp.Views.TasksIndex = Backbone.View.extend({
 // 	},
 // 	
 // 	render: function()	{
-// 		$(this.el).html(this.template({ tasks: this.collection }));
+// 		$(this.el).html(JST['tasks/tasks_index']({ tasks: this.collection }));
 // 	}
 // 	
 // });
