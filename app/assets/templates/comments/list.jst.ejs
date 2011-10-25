@@ -1,8 +1,5 @@
-// comments/list.jst
-<ul>
-	<% task.comments.each(function(comment)	{
-		<%= JST['comments/item']({ comment: comment }) %>
-	<% }); %>
+<ul class="comments-list">
 </ul>
 
-<%= JST['comments/new']() %>
+<section class="new-comment-form">
+</section>
