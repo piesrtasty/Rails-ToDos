@@ -5,8 +5,10 @@ ExampleApp.Routers.Tasks = Support.SwappingRouter.extend({
   },
 
   routes: {
-    "": "index",
-    "new" : "newTask"
+    ""					: "index",
+    "new" 			: "newTask",
+		"tasks:id"	: "show"
+
   },
 
   index: function() {
@@ -17,5 +19,12 @@ ExampleApp.Routers.Tasks = Support.SwappingRouter.extend({
   newTask: function() {
     var view = new ExampleApp.Views.TasksNew({ collection: this.collection });
     $('#tasks').html(view.render().el);
-  }
+  },
+
+	show: function(taskId)	{
+		var task = this.collection.get(taskId);
+		var view = new ExampleApp.Views.TaskShow({ model: task});
+		$('#tasks').html(view.render().el);
+	}
+
 });
