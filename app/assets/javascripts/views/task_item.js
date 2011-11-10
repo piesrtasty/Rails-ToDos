@@ -21,7 +21,13 @@ ExampleApp.Views.TaskItem = Backbone.View.extend({
 
     this.$('input').attr("id", "task_completed_" + this.model.get('id'));
     this.$('input').prop("checked", this.model.isComplete());
+
+		this.$('a').attr("href", this.taskUrl());
   },
+
+	taskUrl: function()	{
+		return "#tasks/" + this.model.get('id');
+	}
 
   update: function() {
     var complete = this.$('input').prop('checked');
