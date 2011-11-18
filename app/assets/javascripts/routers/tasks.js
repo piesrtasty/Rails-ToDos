@@ -23,8 +23,11 @@ ExampleApp.Routers.Tasks = Support.SwappingRouter.extend({
 
 	show: function(taskId)	{
 		var task = this.collection.get(taskId);
-		var view = new ExampleApp.Views.TaskShow({ model: task});
-		$('#tasks').html(view.render().el);
+		task.fetch({
+			success: function()	{
+				var view = new ExampleApp.Views.TaskShow({ model: task });
+				$('#tasks').html(view.render().el);
+			}
+		});
 	}
-
 });
