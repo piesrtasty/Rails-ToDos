@@ -7,6 +7,9 @@ gem 'rails-backbone'
 gem 'jquery-rails'
 gem 'ejs'
 gem "flutie", "~> 1.3.2"
+gem "clearance", "~> 0.13.0"
+gem 'paperclip'
+gem 'rabl'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
@@ -23,8 +26,8 @@ end
 
 group :test do
   gem 'turn', :require => false
-  gem "capybara", "~> 1.0.1"
-  gem "selenium-webdriver", "~> 2.5.0"
+  gem "capybara", "~> 1.1.1"
+  gem "selenium-webdriver", "~> 2.10.0"
   gem 'cucumber-rails', "~> 1.0.2"
   gem "factory_girl_rails"
   gem "bourne"
@@ -32,4 +35,6 @@ group :test do
   gem "nokogiri"
   gem "shoulda"
   gem "launchy"
+  gem "guard-spork"
+  gem "spork", "~> 0.9.0.rc"
 end
