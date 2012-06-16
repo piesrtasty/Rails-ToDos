@@ -1,4 +1,4 @@
-# Rails ToDos (
+# Rails ToDos
 
 An implemnation of the classic todo item manager application with a Ruby on Rails backend and a Backbone.js frontend.
 
