@@ -6,11 +6,15 @@ An implemnation of the classic todo item manager application with Ruby on Rails 
 
 Install Ruby (preferably through RVM) by entering the following in a terminal.
 
-    <code>$ curl -L https://get.rvm.io | bash -s stable --ruby</code>
+<code>$ curl -L https://get.rvm.io | bash -s stable --ruby</code>
+
+After RVM installs, add the following to your bash profile to ensure RVM is loaded into every new shell session
+
+<code>[[ -s "/Users/idontgiveafuck/.rvm/scripts/rvm" ]] && source "/Users/idontgiveafuck/.rvm/scripts/rvm"</code>
 
 Once RVM is installed, install Ruby 1.9.3.
 
-    <code>rvm install ruby-1.9.3-rc1</code> 
+<code>rvm install ruby-1.9.3-rc1</code> 
 
 Backbone.js on Rails Example app
 ================================
