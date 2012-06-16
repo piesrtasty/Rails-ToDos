@@ -26,11 +26,12 @@ Inside of the applications directory install the bundle specified in the Gemfile
 
 <code>bundle</code> (Which is a shortcut for 'bundle install'
 
-Create the Database and run the applications migrations to create the database's tables.
+Create the database and populate it with tables.
 
 <code>bundle exec rake db:create db:migrate</code>
 
 Start the server
+
 <code>bundle exec rails server</code>
 
 
