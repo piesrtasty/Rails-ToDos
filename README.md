@@ -2,7 +2,7 @@
 
 An implemnation of the classic todo item manager application with a Ruby on Rails backend and a Backbone.js frontend.
 
-*Note: This is a Rails 3.1 application.
+<sub>Note: This is a Rails 3.1 application.</sub>
 
 ## Installation
 
