@@ -55,11 +55,7 @@ To run them all at once.
 Or run them one at a time
 
 <code>bundle rake cucumber</code>
+
 <code>bundle rake spec</code>
+
 <code>bundle rake jasmine</code>
-
- 
-
-Backbone.js on Rails Example app
-================================
-
