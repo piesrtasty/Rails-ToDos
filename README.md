@@ -1,3 +1,9 @@
+# Rails ToDos
+
+An implemnation of the classic todo item manager application with Ruby on Rails and Backbone.js
+
+
+
 Backbone.js on Rails Example app
 ================================
 
