@@ -12,9 +12,22 @@ After RVM installs, add the following to your bash profile to ensure RVM is load
 
 <code>[[ -s "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm" ]] && source "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm"</code>
 
-Once RVM is installed, install Ruby 1.9.3.
+Install Ruby 1.9.3.
 
-<code>rvm install ruby-1.9.3-rc1</code> 
+<code>rvm install ruby-1.9.3-rc1</code>
+
+## Quick Start
+
+Install Bundler
+
+<code>gem install bundler</code>
+
+Inside of the applications directory install the bundle specified in the Gemfile
+
+<code>bundle</code>
+Synonymous with
+<code>bundle install</code>
+
 
 Backbone.js on Rails Example app
 ================================
