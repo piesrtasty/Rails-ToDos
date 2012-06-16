@@ -10,7 +10,7 @@ Install Ruby (preferably through RVM) by entering the following in a terminal.
 
 After RVM installs, add the following to your bash profile to ensure RVM is loaded into every new shell session
 
-<code>[[ -s "/Users/idontgiveafuck/.rvm/scripts/rvm" ]] && source "/Users/idontgiveafuck/.rvm/scripts/rvm"</code>
+<code>[[ -s "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm" ]] && source "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm"</code>
 
 Once RVM is installed, install Ruby 1.9.3.
 
