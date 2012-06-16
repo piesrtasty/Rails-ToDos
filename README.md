@@ -24,9 +24,14 @@ Install Bundler
 
 Inside of the applications directory install the bundle specified in the Gemfile
 
-<code>bundle</code>
-Synonymous with
-<code>bundle install</code>
+<code>bundle</code> (Which is a shortcut for 'bundle install'
+
+Create the Database and run the applications migrations to create the database's tables.
+
+<code>bundle exec rake db:create db:migrate</code>
+
+Start the server
+<code>bundle exec rails server</code>
 
 
 Backbone.js on Rails Example app
