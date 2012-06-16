@@ -1,6 +1,8 @@
-# Rails ToDos 
+# Rails ToDos (
 
-An implemnation of the classic todo item manager application with Ruby on Rails and Backbone.js
+An implemnation of the classic todo item manager application with a Ruby on Rails backend and a Backbone.js frontend.
+
+*Note: This is a Rails 3.1 application.
 
 ## Installation
 
@@ -22,7 +24,7 @@ Install Bundler
 
 <code>gem install bundler</code>
 
-Inside of the applications directory install the bundle specified in the Gemfile
+Inside of the applications directory install the gem bundle specified in the Gemfile
 
 <code>bundle</code> (Which is a shortcut for 'bundle install'
 
@@ -37,9 +39,9 @@ Start the server
 Go to http://localhost:3000 to open the application.
 
 
-## Installation
+## Running The Tests
 
-The first time, creare the test database.
+The first time, create the test database.
 
 <code>bundle exec rake db:test:prepare</code>
 
@@ -61,35 +63,3 @@ Or run them one at a time
 Backbone.js on Rails Example app
 ================================
 
-It's a Rails 3.1 app.
-
-Running the app
----------------
-
-Make sure you're running Ruby 1.9 (there's an .rvmrc) and then:
-
-    bundle
-    bundle exec rake db:create db:migrate
-    bundle exec rails server
-
-Open on http://localhost:3000
-
-Running the tests
------------------
-
-The first time, create the test database:
-
-    bundle exec rake db:test:prepare
-
-There are three sets of tests: Cucumber integration test, RSpec isolation specs
-for Rails components, and Jasmine isolation specs for Backbone components.
-
-Run them all at once:
-
-    bundle rake
-
-Or one at a time
-
-    bundle rake cucumber
-    bundle rake spec
-    bundle rake jasmine
