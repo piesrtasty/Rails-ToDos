@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640" />
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Rails-todos by virtually-ghetto</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/virtually-ghetto/Rails-ToDos">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Rails-todos</h1>
+            <h2>An implemnation of the classic todo item manager application with a Ruby on Rails (3.1) backend and a Backbone.js frontend.</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/virtually-ghetto/Rails-ToDos/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/virtually-ghetto/Rails-ToDos/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>Rails ToDos</h1>
+
+<p>An implemnation of the classic todo item manager application with a Ruby on Rails backend and a Backbone.js frontend.</p>
+
+<p><sub>Note: This is a Rails 3.1 application.</sub></p>
+
+<h2>Installation</h2>
+
+<p>Install Ruby (preferably through RVM) by entering the following in a terminal.</p>
+
+<p><code>$ curl -L <a href="https://get.rvm.io">https://get.rvm.io</a> | bash -s stable --ruby</code></p>
+
+<p>After RVM installs, add the following to your bash profile to ensure RVM is loaded into every new shell session</p>
+
+<p><code>[[ -s "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm" ]] &amp;&amp; source "/Users/{{ YOUR USERNAME }}/.rvm/scripts/rvm"</code></p>
+
+<p>Install Ruby 1.9.3.</p>
+
+<p><code>rvm install ruby-1.9.3-rc1</code></p>
+
+<h2>Quick Start</h2>
+
+<p>Install Bundler</p>
+
+<p><code>gem install bundler</code></p>
+
+<p>Inside of the applications directory install the gem bundle specified in the Gemfile</p>
+
+<p><code>bundle</code> (Which is a shortcut for 'bundle install'</p>
+
+<p>Create the database and populate it with tables.</p>
+
+<p><code>bundle exec rake db:create db:migrate</code></p>
+
+<p>Start the server</p>
+
+<p><code>bundle exec rails server</code></p>
+
+<p>Go to http://localhost:3000 to open the application.</p>
+
+<h2>Running The Tests</h2>
+
+<p>The first time, create the test database.</p>
+
+<p><code>bundle exec rake db:test:prepare</code></p>
+
+<p>The application has three sets of tests: Cucumber integration test, RSpec isolation specs
+for Rails components, and Jasmine isolation specs for Backbone components.</p>
+
+<p>To run them all at once.</p>
+
+<p><code>bundle rake</code></p>
+
+<p>Or run them one at a time</p>
+
+<p><code>bundle rake cucumber</code></p>
+
+<p><code>bundle rake spec</code></p>
+
+<p><code>bundle rake jasmine</code></p>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/virtually-ghetto">virtually-ghetto</a> can be found on <a href="https://github.com/virtually-ghetto/Rails-ToDos">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
